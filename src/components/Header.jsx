@@ -1,17 +1,21 @@
-import Logo from "/assets/nakama-logo.png"
-import ShoppingCartIcon from "/assets/shopping-cart-icon.svg"
+import Logo from "/assets/nakama-logo.png";
+import ShoppingCartIcon from "/assets/shopping-cart-icon.svg";
+import { Link } from "react-router-dom";
+import "../styles/Header.css";
 
 function Header() {
   return (
     <>
-      <header className="bg-white">
+      <header className="bg-white remove">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              <a className="block text-nakamaRed" href="#">
+              <div className="block text-nakamaRed">
                 <span className="sr-only">Home</span>
-                <img src={Logo} className="w-12"/>
-              </a>
+                <Link to="/">
+                  <img src={Logo} className="w-12" />
+                </Link>
+              </div>
             </div>
 
             <div className="md:flex md:items-center md:gap-8">
@@ -41,12 +45,12 @@ function Header() {
 
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
-                  <a
-                    className="rounded-md bg-nakamaRed px-2.5 py-2.5 text-sm font-medi shadow hover:bg-nakamaRed/75 transition duration-300 ease-in-out"
-                    href="#"
+                  <Link
+                    className="rounded-md bg-black px-2.5 py-2.5 text-sm font-medi shadow hover:bg-nakamaRed transition duration-300 ease-in-out"
+                    to="/cart"
                   >
                     <img src={ShoppingCartIcon} className="w-6 h-6" />
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="block md:hidden">
