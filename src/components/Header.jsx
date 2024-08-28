@@ -1,4 +1,4 @@
-import Logo from "/assets/nakama-logo.png";
+import Logo from "/assets/nakama-logo-text.png";
 import ShoppingCartIcon from "/assets/shopping-cart-icon.svg";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
@@ -13,7 +13,7 @@ function Header() {
               <div className="block text-nakamaRed">
                 <span className="sr-only">Home</span>
                 <Link to="/">
-                  <img src={Logo} className="w-12" />
+                  <img src={Logo} className="w-24" />
                 </Link>
               </div>
             </div>
