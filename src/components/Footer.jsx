@@ -106,7 +106,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="#"
+                    href="https://github.com/nicovalerian/nakama"
                     rel="noreferrer"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
@@ -274,7 +274,7 @@ function Footer() {
               </ul>
 
               <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-               &copy; 2024 NakamaTech, Inc. All rights reserved.
+               (Made with ❤️ by Nico Valerian)
               </p>
             </div>
           </div>
