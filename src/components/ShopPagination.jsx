@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import ShopPageButton from "./ShopPageButton";
 
+
 function ShopPagination({ numberOfPages, currentPage, setCurrentPage }) {
   return (
     <>

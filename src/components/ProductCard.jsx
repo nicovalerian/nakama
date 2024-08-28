@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
   return (
     <>
       <li>
-        <a href="#" className="group block overflow-hidden">
+        <Link to={"/product/" + (product?.id - 1)} className="group block overflow-hidden">
           <img
             src={product?.image || ""}
             alt=""
@@ -22,7 +23,7 @@ function ProductCard({ product }) {
               <span className="tracking-wider text-gray-900"> ${product?.price} </span>
             </p>
           </div>
-        </a>
+        </Link>
       </li>
     </>
   );
