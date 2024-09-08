@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useProducts } from "../hooks/useProducts";
 import { Link } from "react-router-dom";
@@ -13,6 +14,9 @@ function ProductPage() {
   const { id } = useParams();
   const { data: products, isLoading, isError, error } = useProducts();
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (isLoading) return <LoadingPage />;
   if (isError) return <ErrorPage message={error.message} />;
