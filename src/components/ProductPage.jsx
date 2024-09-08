@@ -7,6 +7,7 @@ import DetailsList from "./DetailsList";
 import ProductCard from "./ProductCard";
 import BackButton from "./BackButton";
 import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
 
 function ProductPage() {
   const { id } = useParams();
@@ -14,9 +15,9 @@ function ProductPage() {
   
 
   if (isLoading) return <LoadingPage />;
-  if (isError) return <div>Error: {error.message}</div>;
+  if (isError) return <ErrorPage message={error.message} />;
 
-  if (!products[id]) return <div>Product not found</div>;
+  if (!products[id]) return <ErrorPage message={"Product not found"} />;
 
   return (
     <>

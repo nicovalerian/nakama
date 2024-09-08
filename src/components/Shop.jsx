@@ -5,13 +5,14 @@ import Footer from "./Footer";
 import ShopPagination from "./ShopPagination";
 import ProductCard from "./ProductCard";
 import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
 
 function Shop() {
   const [currentPage, setCurrentPage] = useState(1);
   const { data: products, isLoading, isError, error } = useProducts();
 
   if (isLoading) return <LoadingPage />;
-  if (isError) return <div>Error: {error.message}</div>;
+  if (isError) return <ErrorPage message={error.message} />;
 
   const itemPerPage = 4;
   const numberOfPages = Math.ceil(products.length / itemPerPage);
