@@ -6,13 +6,14 @@ import Footer from "./Footer";
 import DetailsList from "./DetailsList";
 import ProductCard from "./ProductCard";
 import BackButton from "./BackButton";
+import LoadingPage from "./LoadingPage";
 
 function ProductPage() {
   const { id } = useParams();
   const { data: products, isLoading, isError, error } = useProducts();
   
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingPage />;
   if (isError) return <div>Error: {error.message}</div>;
 
   if (!products[id]) return <div>Product not found</div>;

@@ -4,12 +4,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ShopPagination from "./ShopPagination";
 import ProductCard from "./ProductCard";
+import LoadingPage from "./LoadingPage";
 
 function Shop() {
   const [currentPage, setCurrentPage] = useState(1);
   const { data: products, isLoading, isError, error } = useProducts();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingPage />;
   if (isError) return <div>Error: {error.message}</div>;
 
   const itemPerPage = 4;
